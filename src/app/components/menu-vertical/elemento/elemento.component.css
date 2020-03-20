@@ -1,0 +1,41 @@
+#sidebar{
+    width: 300px;
+    background-color: #303A40;
+    color:#BBBBBB;
+}
+
+.elemento{
+    background-color: #303A40;
+    color:#BBBBBB;
+}
+
+.elemento:hover,
+.elemento:focus{
+    background-color: #007BFF;
+    color:#FFFFFF;
+    cursor: pointer;
+}
+.desplegable[data-toggle].collapsed::after {
+    content: " ▾";
+}
+.desplegable[data-toggle]:not(.collapsed):after {
+    content: " ▴";
+}
+.pd-0{
+    padding-left: 0px;
+}
+.pd-1{
+    padding-left: 15px;
+}
+.pd-2{
+    padding-left: 30px;
+}
+.pd-3{
+    padding-left: 45px;
+}
+.pd-4{
+    padding-left: 60px;
+}
+.pd-5{
+    padding-left: 75px;
+}

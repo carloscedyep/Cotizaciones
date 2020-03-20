@@ -1,0 +1,21 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="card-header" style="width:100%;background-color: #303A40;
+                color:#BBBBBB;border-bottom-style: solid;
+                border-bottom-width: 1px;border-bottom-color: #555555;">
+         Categorías   
+        </div>
+        <div id="sidebar" style="width:100%;">
+            <ul class="nav flex-column flex-nowrap overflow-hidden">
+                <div *ngIf="elementos.length>0">
+                <app-elemento *ngFor="let elemento of elementos" 
+                    [elementos]="elemento"
+                    (elementoEmisor)="menuSeleccionado($event)"
+                    ></app-elemento>
+                </div>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--(click)="open($event, elemento)"-->

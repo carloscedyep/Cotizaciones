@@ -1,0 +1,25 @@
+#sidebar{
+    width: 300px;
+    background-color: #303A40;
+    color:#BBBBBB;
+}
+
+.elemento{
+    background-color: #303A40;
+    color:#BBBBBB;
+}
+
+.elemento:hover,
+.elemento:focus{
+    background-color: #007BFF;
+    color:#FFFFFF;
+    cursor: pointer;
+}
+
+
+.nav-link[data-toggle].collapsed::after {
+    content: " ▾";
+}
+.nav-link[data-toggle]:not(.collapsed):after {
+    content: " ▴";
+}

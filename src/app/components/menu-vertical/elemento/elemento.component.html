@@ -1,0 +1,14 @@
+<li class="nav-item">
+    <a class="nav-link {{clase}} collapsed text-truncate elemento" href="#sub{{id}}" 
+        data-toggle="collapse" data-target="#sub{{id}}"
+        (click)="seleccionMenu()">
+    <small class="{{nivel}}">{{elementos.nombre}}</small>
+    </a>
+    <div class="collapse" id="sub{{id}}" aria-expanded="false">
+        <ul class="flex-column nav">
+            <app-elemento *ngFor="let elemento of elementos.elementos" 
+                [elementos]="elemento"
+                (elementoEmisor)="menuSeleccionado($event)"></app-elemento>
+        </ul>
+    </div>
+</li>

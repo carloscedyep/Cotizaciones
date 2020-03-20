@@ -1,0 +1,35 @@
+<div class="principal">
+    <div class ="flex-fila">
+        <div class="columna-50" style="justify-content:center;">
+            <form style="width: 400px;">
+                <h2>Recupera tu contraseña</h2>
+                <div class="form-group">
+                  <label for="usuario">Usuario</label> 
+                  <input type="text"
+                    class="form-control"
+                    id="usuario"
+                    placeholder="Ingresar tu usuario">
+                </div>
+                <div class="form-group">
+                <label for="pregunta">Pregunta secreta</label> 
+                <select id="pregunta" class="form-control" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <option>¿Cuál es el primer apellido de tu abuelo?</option>
+                    <option>¿Cuál es el nombre de tu primera mascota?</option>
+                    <option>¿Cuál es el primer nombre de tu madre?</option>
+                </select>
+                </div>
+                <div class="form-group">
+                    <label for="respuesta">Respuesta</label>
+                    <textarea class="form-control" id="respuesta" rows="3"></textarea>
+                </div>
+                <br>
+                <div class="form-group centrado">
+                  <button class="btn btn-primary btn-block">Recuperar</button>
+                </div>
+            </form>
+        </div>
+    <div class="columna-50">
+        <user-options></user-options>
+    </div>
+    </div>    
+</div>

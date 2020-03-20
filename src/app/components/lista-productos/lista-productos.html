@@ -1,0 +1,38 @@
+<div class="fila">
+    <div class="flex-fila" style="padding-left: 1%;padding-right: 1%;">
+        <div class="columna-60">
+            <h5 class="card-title">Categoría {{nombreCategoria}}</h5>
+        </div>
+        <div class="columna-40 justify-content-end" >
+            <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary">Recientes</button>
+                <button type="button" class="btn btn-secondary">Más usados</button>
+                <button type="button" class="btn btn-secondary">Precio</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex-fila">
+        <div class="columna-100 flex-fila" style="padding:0;">
+            <app-producto *ngFor="let producto of productos" 
+                [productos]="producto"
+                (productoEmisor)="SeleccionProducto($event)"
+                class="bloque"
+                ></app-producto>
+        </div>
+    </div>
+    <br>
+    <nav aria-label="Page navigation example " class="btn-sm">
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+            <a class="page-link" tabindex="-1" aria-disabled="true">Anterior</a>
+            </li>
+            <li class="page-item"><a class="page-link" >1</a></li>
+            <li class="page-item"><a class="page-link" >2</a></li>
+            <li class="page-item"><a class="page-link" >3</a></li>
+            <li class="page-item">
+            <a class="page-link" >Siguiente</a>
+            </li>
+        </ul>
+    </nav>
+</div>  

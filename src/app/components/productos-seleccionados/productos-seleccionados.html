@@ -1,0 +1,40 @@
+<div class="fila" style="padding-left: 1%;padding-right: 1%;">
+  <div class="flex-fila">
+    <div class="columna-70">
+        <div class="fila">
+        <h5 class="card-title">Productos seleccionados</h5>
+        <ul class="list-group columna-100" style="margin-top: 1%;">
+            <div *ngIf="productos.length>0">
+                <li *ngFor="let producto of productos" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between ">
+                        <div class="columna-30">
+                        {{producto.nombre}}
+                        </div>
+                        <div class="columna-20">
+                          <small>Unidades</small>
+                          <input class="form-control form-control-sm" style="width: 70px; height: 23px; margin-left: 5px;" type="number" value="1" min="0" max="9999" maxlength="4" step="1"/>
+                        </div>
+                        <div class="columna-20">
+                          <small>Precio</small>
+                          <input class="form-control form-control-sm" style="width: 70px; height: 23px; margin-left: 5px;" value="{{producto.precio}}"/>
+                        </div>
+                        <div class="columna-20" style="display:inline; text-align: right;">
+                        <small style="font-weight: bold;">precio total: {{producto.precio}}</small>
+                        </div>
+                        <div class="columna-10" style="display:inline; text-align: right;">
+                        <button type="button" class="close" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                          </div>
+                    </div>
+                </li>
+            </div>
+        </ul>
+    </div>
+    </div>
+    <div class="columna-30" >
+        <h5 class="card-title">Resumen</h5>
+    </div>
+</div>
+    
+</div>
