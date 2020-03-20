@@ -1,28 +1,25 @@
 <div class="container-fluid">
-<div class="row">   
-    <div class="col-3 mt-1">   
-        <app-menu-vertical 
-                (menuEmisor) = "seleccionCategoria($event)"
-                style="width: 100%;padding-top: 5px;">
-        </app-menu-vertical>
-    </div>
-    <div class="col">   
-        <div class="fila"> 
-            <div class="columna-100" >   
-                    <lista-productos 
-                        [categoria] = "categoria"
-                        (productoEmisor) = "seleccionProducto($event)"
-                        style="width: 100%;padding-top: 5px;">
+    <div class="row">
+        <div class="col-3 mt-1">
+            <app-menu-vertical (menuEmisor)="seleccionCategoria($event)" style="width: 100%;padding-top: 5px;">
+            </app-menu-vertical>
+        </div>
+        <div class="col">
+            <div class="row">
+                <div class="col mt-1">
+                    <lista-productos [categoria]="categoria" (productoEmisor)="seleccionProducto($event)">
                     </lista-productos>
-            </div>  
+                </div>
+            </div>
             <hr>
-            <br>
-            <div class="columna-100"> 
-                    <productos-seleccionados [Productos]="producto" style="width: 100%;">
-                            
+            <div class="row">
+                <br>
+                <div class="col">
+                    <productos-seleccionados [Productos]="producto">
+
                     </productos-seleccionados>
+                </div>
             </div>
         </div>
     </div>
-</div>
 </div>
